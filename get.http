@@ -1,0 +1,6 @@
+GET http://localhost:3000/greet
+Content-Type: application/json
+{
+    "name": "sample",
+    "{{$timestamp}}": "18:27:50 GMT"
+}
