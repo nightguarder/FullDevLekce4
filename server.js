@@ -17,7 +17,7 @@ const app = express()
 app.use(bodyParser.json());
 app.use(express.json());
 
-app.get('/',function(req, res) {
+app.get('/',(req, res) => {
     res.send('Public endpoint')
 });
 

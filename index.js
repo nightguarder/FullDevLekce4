@@ -1,3 +1,4 @@
+//Basics from Lekce 4
 const jwt = require('jsonwebtoken')
 const SECRET = "supersecrettoken"
 
