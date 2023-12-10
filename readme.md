@@ -32,7 +32,7 @@ const users = [
 ``
 
 - is decoded to: 
-``
+```json
 {
   "email": "user@email.com",
   "id": "5",
@@ -40,7 +40,7 @@ const users = [
   "iat": 1701969694,
   "exp": 1701973294
 }
-``
+```
 ## How to 
 
 1. Generate your access token at /register route
