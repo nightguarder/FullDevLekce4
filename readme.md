@@ -22,14 +22,17 @@ const users = [
     { username: "user2", password: "secure_password" }
 ]
 ```
-## Notes
 
-- Encode your token: https://jwt.io 
-- Token that has a form `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAZW1haWwuY29tIiwiaWQiOiI1Iiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzAxOTY5Njk0LCJleHAiOjE3MDE5NzMyOTR9.4eiLapv5uOwXovZcbdG_W_TiWQI_aSv8Uq-nVPzqL3s`
+## Results
+
+- Decode your token: https://jwt.io 
+- Token that has a form 
+``
+`eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9....`
 ``
 
 - is decoded to: 
-
+``
 {
   "email": "user@email.com",
   "id": "5",
@@ -38,11 +41,11 @@ const users = [
   "exp": 1701973294
 }
 ``
-## Results
+## How to 
 
 1. Generate your access token at /register route
 
-```
+```json
 POST http://localhost:3000/register HTTP/1.1
 Content-Type: application/json
 
@@ -64,7 +67,7 @@ Authorization: Bearer insert_your_accessToken
 ```
 
 
-``
+````json
 {
   "message": "Nice! This is a protected endpoint",
   "authData": {
@@ -74,4 +77,4 @@ Authorization: Bearer insert_your_accessToken
     "iat": 1702241549
   }
 }
-``
+````
