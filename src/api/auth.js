@@ -23,6 +23,7 @@ const verifyToken = (req, res, next) => {
     res.sendStatus(403);
   }
 };
+//generovani tokenu na zaklade headers from POST request
 function generateToken(username, password, role) {
   // default payload
   const payload = {
@@ -35,4 +36,4 @@ function generateToken(username, password, role) {
 
   return token;
 }
-module.exports = verifyToken;
+module.exports = verifyToken,generateToken;

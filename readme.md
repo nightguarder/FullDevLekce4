@@ -38,3 +38,40 @@ const users = [
   "exp": 1701973294
 }
 ``
+## Results
+
+1. Generate your access token at /register route
+
+```
+POST http://localhost:3000/register HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "cyril",
+    "password": "cyril123",
+    "role": "admin"
+}
+```
+
+``eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...``
+
+2. Use the token to access a protected rout under /login/protected
+
+```
+GET http://localhost:3000/login/protected HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer insert_your_accessToken
+```
+
+
+``
+{
+  "message": "Nice! This is a protected endpoint",
+  "authData": {
+    "username": "cyril",
+    "password": "password",
+    "role": "admin",
+    "iat": 1702241549
+  }
+}
+``

@@ -21,7 +21,8 @@ app.get('/',(req, res) => {
     res.send('Public endpoint')
 });
 
-app.post('/login', (req, res) => {
+//Register for a token using credentials from fakedb
+app.post('/register', (req, res) => {
     // Read username and password from request body
     const { username, password, role } = req.body;
 
