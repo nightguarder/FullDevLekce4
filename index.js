@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken')
-const SECRET = "admin_password"
+const SECRET = "supersecrettoken"
 
 //Data která jsou public, nesmí obsahovat secret
 const payload = {
